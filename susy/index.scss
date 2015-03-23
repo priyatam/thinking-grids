@@ -1,0 +1,135 @@
+// Goto bower_compnents and rename normalize.css to normalize.scss to inline css
+@import "bower_components/normalize.css/normalize";
+@import "bower_components/susy/sass/susy";
+@import "bower_components/breakpoint-sass/stylesheets/breakpoint";
+
+// Configuration
+
+$total-columns: 10;
+$column-width: 4rem;
+$gutter-width: 1rem;
+$grid-padding: 0;
+$container-style: magic;
+$show-grid-backgrounds: true;
+
+// Mixins
+
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+}
+
+@mixin clearfix() {
+    & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// Grids
+
+.container {
+    @include container;
+    @include clearfix;
+}
+
+.ag1 {
+    @include span(2 of 10);
+}
+
+.ag2 {
+    @include span(6 of 10);
+    @include clearfix;
+}
+
+.ag3 {
+    @include span(2 of 10 last);
+}
+
+.ag4 {
+    @include span(3 of 6);
+}
+
+.ag5 {
+    @include span(3 of 6 last);
+}
+
+.ag6 {
+    @include span(2 of 6);
+}
+
+.ag7 {
+    @include span(4 of 6 last);
+    @include clearfix;
+}
+
+.ag8 {
+    @include span(2 of 4);
+}
+
+.ag9 {
+    @include span(2 of 4 last);
+}
+
+.ag10 {
+    clear: both;
+    @include span(full);
+}
+
+// Colors
+
+.container {
+    background-color: #fbeecb;
+}
+
+.ag {
+    @include border-radius(5px);
+}
+
+.ag1, .ag3 {
+    background-color: #71dad2;
+}
+
+.ag2 {
+    background-color: #fae7b3;
+}
+
+.ag4,.ag5,.ag8,.ag9 {
+    background-color: #ee9e9c;
+}
+
+.ag6 {
+    background-color: #f09671;
+}
+
+.ag7 {
+    background-color: #f6d784;
+}
+
+.ag10 {
+    background-color: #ea9fc3;
+}
+
+// Typography
+
+h1 {
+    text-align: center;
+    font-family: 'Open Sans', helvetica;
+    font-weight: 300;
+    color: #222;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: normal;
+    padding-top: 1.8rem;
+    padding-bottom: 1.8rem;
+}

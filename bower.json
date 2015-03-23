@@ -24,6 +24,9 @@
     "*.json"
   ],
   "devDependencies": {
-    "bootstrap": "~3.3.4"
+    "bootstrap": "~3.3.4",
+    "normalize.css": "~3.0.2",
+    "susy": "~2.2.2",
+    "breakpoint-sass": "~2.5.0"
   }
 }
