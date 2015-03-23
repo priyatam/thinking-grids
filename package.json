@@ -1,0 +1,38 @@
+{
+  "name": "learning-grids",
+  "version": "0.1.0",
+  "description": "Design Grids using popular libraries in CSS3, Less, Sass, Rework and Postcss",
+  "repository": "https://github.com/priyatam/learning-grids",
+  "author": "Priyatam Mudivarti",
+  "config": {
+    "bootstrap": "bootstrap"
+  },
+  "devDependencies": {
+    "hashmark": "^2.0.0",
+    "jade": "^1.7.0",
+    "nodemon": "^1.2.1",
+    "parallelshell": "^1.0.0",
+    "rimraf": "^2.2.8",
+    "s3-cli": "^0.11.1",
+    "node-sass": "^3.0.0-alpha.1",
+    "less": "^2.4.0",
+    "live-server": "0.7.0"
+  },
+  "scripts": {
+    "prestart": "npm install && bower install",
+    "clean": "rimraf /**/build/*",
+    "prebuild": "npm run clean -s",
+    "build:less": "lessc bootstrap/index.less bootstrap/build/index.css && hashmark -s -l 8 -m assets.json dist/main.css 'dist/{name}{hash}{ext}'",
+    "build:sass": "sass assets/styles/main.styl -m -o dist/ && hashmark -s -l 8 -m assets.json dist/main.css 'dist/{name}{hash}{ext}'",
+    "build:stylus": "stylus assets/styles/main.styl -m -o dist/ && hashmark -s -l 8 -m assets.json dist/main.css 'dist/{name}{hash}{ext}'",
+    "build": "npm run build:less && npm run build:sass && npm run build:markup -s",
+    "watch:less": "nodemon --watch bootstrap/*.less --ext less --exec 'npm run build:less'",
+    "build:markup": "jade assets/markup/index.jade --obj assets.json -o dist",
+    "watch": "npm run watch-less & npm run watch-server",
+    "watch:build": "nodemon -q -w assets/ --ext '.' --exec 'npm run build'",
+    "watch-server": "nodemon --ignore app --ignore static server.js",
+    "deploy:prod": "s3-cli sync ./dist/ s3://example-com/prod-site/",
+    "live-server": "live-server --port=8000",
+    "start": "npm run watch:less & npm run live-server"  
+  }
+}

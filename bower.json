@@ -1,0 +1,29 @@
+{
+  "name": "learning-grids",
+  "version": "0.1.0",
+  "description": "Examples of Grids in CSS3, Less, Sass, Rework, and PostCSS",
+  "authors": [
+    "Priyatam Mudivarti <priyatam@gmail.com>"
+  ],
+  "keywords": [
+    "layout",
+    "grid",
+    "typography",
+    "sass",
+    "less",
+    "postcss",
+    "rework",
+    "responsive",
+    "rwd"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "docs",
+    "test",
+    "*.json"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.3.4"
+  }
+}

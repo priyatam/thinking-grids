@@ -1,0 +1,46 @@
+@import '../bower_components/bootstrap/less/normalize';
+@import '../bower_components/bootstrap/less/variables';
+@import '../bower_components/bootstrap/less/mixins';
+@import '../bower_components/bootstrap/less/grid';
+@import '../bower_components/bootstrap/less/type';
+@import '../bower_components/bootstrap/less/utilities';
+@import '../bower_components/bootstrap/less/responsive-utilities';
+
+@import (css) url('http://brick.a.ssl.fastly.net/Lato:400,400i');
+@import (css) url('http://brick.a.ssl.fastly.net/Source+Code+Pro:200,300');
+
+@font-family-base: 'Lato', sans-serif;
+@font-family-monospace: "Source Code Pro", Monaco, monospace;
+
+@font-size-base: 1.5rem;
+@line-height-base: 1.45rem;
+
+@base-color: #f921ab;
+
+h4 {
+    font: normal normal 400 2rem @font-family-base;
+    margin-top: 25px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.row .row {
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+[class*="col-"] {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #eee;
+  background-color: rgba(86,61,124,.15);
+  border: 1px solid #ddd;
+  border: 1px solid rgba(86,61,124,.2);
+}
+
+hr {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
