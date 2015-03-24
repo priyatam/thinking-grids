@@ -26,6 +26,8 @@
     "bootstrap": "~3.3.4",
     "normalize.css": "~3.0.2",
     "susy": "~2.2.2",
-    "breakpoint-sass": "~2.5.0"
+    "breakpoint-sass": "~2.5.0",
+    "flexboxgrid": "~6.1.1",
+    "gridism": "~0.2.1"
   }
 }

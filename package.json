@@ -19,15 +19,16 @@
     "prebuild": "npm run clean -s",
     "build:bootstrap": "lessc bootstrap/index.less bootstrap/build/index.css --source-map-map-inline",
     "build:frameless": "lessc frameless/index.less frameless/build/index.css --source-map-map-inline",
+    "build:gridism": "lessc gridism/index.less gridism/build/index.css --source-map-map-inline",
     "build:sass": "node-sass susy/*.scss -o susy/build --source-map-embed",
     "build:stylus": "stylus brush/index.styl -m -o brush/build",
-    "watch:less": "nodemon --watch {bootstrap,frameless}/*.less --ext less --exec 'npm run build:bootstrap & npm run build:frameless'",
+    "watch:less": "nodemon --watch bootstrap --watch frameless --watch gridism --ext less --exec 'npm run build:bootstrap && npm run build:frameless && npm run build:gridism'",
     "watch:sass": "nodemon --watch sass/*.scss --ext scss --exec 'npm run build:sass'",
     "hashmark-less": "hashmark -s -l 8 -m assets.json dist/main.css 'dist/{name}{hash}{ext}'",
     "live-server": "live-server --port=8000",
     "start:less": "npm run watch:less & npm run live-server",
     "start:sass": "npm run watch:sass & npm run live-server",
-    "start": "npm run watch-less & npm run watch:sass & npm run live-server",
+    "start": "npm run watch:less & npm run watch:sass & npm run live-server",
     "deploy": "s3-cli sync ./dist/ s3://example-com/prod-site/"
   }
 }
