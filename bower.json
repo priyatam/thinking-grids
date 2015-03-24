@@ -6,15 +6,14 @@
     "Priyatam Mudivarti <priyatam@gmail.com>"
   ],
   "keywords": [
-    "layout",
-    "grid",
-    "typography",
-    "sass",
-    "less",
-    "postcss",
-    "rework",
     "responsive",
-    "rwd"
+    "grid",
+    "layout",
+    "typography",
+    "less",
+    "sass",
+    "rework",
+    "postcss"
   ],
   "license": "MIT",
   "ignore": [
