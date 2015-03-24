@@ -20,7 +20,7 @@
     "build:frameless": "lessc frameless/index.less frameless/build/index.css --source-map-map-inline",
     "build:flexbox"  : "lessc flexbox/index.less flexbox/build/index.css --source-map-map-inline",
     "build:gridism"  : "lessc gridism/index.less gridism/build/index.css --source-map-map-inline",
-    "build:sass"     : "node-sass susy/*.scss -o susy/build --source-map-embed",
+    "build:sass"     : "node-sass susy/index.scss -o susy/build --source-map-embed",
     "build:stylus"   : "stylus brush/index.styl -m -o brush/build",
     "watch:less"     : "nodemon --watch bootstrap  --watch flexbox --watch frameless --watch gridism --ext less --exec 'npm run build:bootstrap && npm run build:flexbox && npm run build:frameless && npm run build:gridism'",
     "watch:sass"     : "nodemon --watch susy/*.scss --ext scss --exec 'npm run build:sass'",

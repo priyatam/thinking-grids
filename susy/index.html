@@ -5,11 +5,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-   
+
     <title>Grid Template for Susy</title>
 
     <link href="build/index.css" rel="stylesheet">
-  
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -22,10 +22,12 @@
     <div class="container">
       <h1>The 10 column complex nested grid AG test</h1>
 
+      <!-- ag1 is on its own -->
       <div class="ag ag1">
         <h2>AG 1</h2>
       </div>
 
+      <!-- ag4 to ag6 are nested within ag2 -->
       <div class="ag ag2">
         <h2>AG 2</h2>
         <div class="ag ag4">
@@ -52,6 +54,8 @@
           </div>
         </div>
       </div>
+
+      <!-- ag8 is on its own -->
       <div class="ag ag3">
         <h2>AG 3</h2>
       </div>
