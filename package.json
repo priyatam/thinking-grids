@@ -4,14 +4,11 @@
   "description": "Design Grids using popular libraries in CSS3, Less, Sass, Rework and Postcss",
   "repository": "https://github.com/priyatam/learning-grids",
   "author": "Priyatam Mudivarti",
-  "config": {
-    "bootstrap": "bootstrap"
-  },
   "devDependencies": {
-    "hashmark": "^2.0.0",
     "less": "^2.4.0",
     "node-sass": "^3.0.0-alpha.0",
     "nodemon": "^1.2.1",
+    "hashmark": "^2.0.0",
     "rimraf": "^2.2.8",
     "live-server": "0.7.0",
     "s3-cli": "^0.11.1"
@@ -20,18 +17,17 @@
     "prestart": "npm install && bower install",
     "clean": "rimraf /**/build/*",
     "prebuild": "npm run clean -s",
-    "build:less": "lessc bootstrap/index.less bootstrap/build/index.css && hashmark -s -l 8 -m assets.json dist/main.css 'dist/{name}{hash}{ext}'",
-    "build:sass": "node-sass susy/*.scss -o susy/build",
-    "build:stylus": "stylus assets/styles/main.styl -m -o dist/ && hashmark -s -l 8 -m assets.json dist/main.css 'dist/{name}{hash}{ext}'",
-    "build": "npm run build:less && npm run build:sass && npm run build:markup -s",
-    "build:markup": "jade assets/markup/index.jade --obj assets.json -o dist",
-    "watch": "npm run watch-less & npm run watch-server",
-    "watch:build": "nodemon -q -w assets/ --ext '.' --exec 'npm run build'",
-    "watch:less": "nodemon --watch bootstrap/*.less --ext less --exec 'npm run build:less'",
-    "watch:sass": "nodemon --watch susy/*.scss --ext scss --exec 'npm run build:sass'",
+    "build:bootstrap": "lessc bootstrap/index.less bootstrap/build/index.css --source-map-map-inline",
+    "build:frameless": "lessc frameless/index.less frameless/build/index.css --source-map-map-inline",
+    "build:sass": "node-sass susy/*.scss -o susy/build --source-map-embed",
+    "build:stylus": "stylus brush/index.styl -m -o brush/build",
+    "watch:less": "nodemon --watch {bootstrap,frameless}/*.less --ext less --exec 'npm run build:bootstrap & npm run build:frameless'",
+    "watch:sass": "nodemon --watch sass/*.scss --ext scss --exec 'npm run build:sass'",
+    "hashmark-less": "hashmark -s -l 8 -m assets.json dist/main.css 'dist/{name}{hash}{ext}'",
     "live-server": "live-server --port=8000",
-    "start-less": "npm run watch:less & npm run live-server",
-    "start-sass": "npm run watch:sass & npm run live-server",
+    "start:less": "npm run watch:less & npm run live-server",
+    "start:sass": "npm run watch:sass & npm run live-server",
+    "start": "npm run watch-less & npm run watch:sass & npm run live-server",
     "deploy": "s3-cli sync ./dist/ s3://example-com/prod-site/"
   }
 }
