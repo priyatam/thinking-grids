@@ -1,4 +1,4 @@
-// Goto bower_compnents and rename normalize.css to normalize.scss to inline css
+// Goto bower_compnents and rename normalize.css to normalize.scss and inline css
 @import "bower_components/normalize.css/normalize";
 @import "bower_components/susy/sass/susy";
 @import "bower_components/breakpoint-sass/stylesheets/breakpoint";
@@ -6,10 +6,22 @@
 // Config
 
 $susy: (
+  container: auto,
   gutters: (1/4),
   global-box-sizing: border-box,
   use-custom: (rem: true)
 );
+
+// Mobile-first breakpoints (min-widths)
+
+$bp-desktop-lg: 2500px;
+$bp-desktop-sm: 1920px;
+$bp-laptop-lg: 1680px;
+$bp-laptop-sm: 1280px;
+$bp-tablet-lg: 960px;
+$bp-tablet-sm: 720px;
+$bp-phone-lg: 480px;
+$bp-phone-sm: 320px;
 
 @include border-box-sizing;
 
@@ -39,63 +51,87 @@ $susy: (
 .container {
   @include container;
   @include clearfix;
-  @include breakpoint(1200px) {
-    //
-  }
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
 .ag1 {
-  @include breakpoint(900px) {
+  @include breakpoint($bp-tablet-sm) {
+    @include span(2 of 6 last);
+  }
+  @include breakpoint($bp-laptop-sm) {
     @include span(2 of 10);
   }
 }
 
 .ag2 {
-  @include breakpoint(900px) {
+  @include clearfix;
+  @include breakpoint($bp-tablet-sm) {
+    @include span(4 of 6);
+  }
+  @include breakpoint($bp-laptop-sm) {
     @include span(6 of 10);
-    @include clearfix;
   }
 }
 
 .ag3 {
-  @include breakpoint(900px) {
+  @include breakpoint($bp-tablet-sm) {
+    @include span(2 of 6 last);
+    margin-top:2em;
+  }
+  @include breakpoint($bp-laptop-sm) {
     @include span(2 of 10 last);
+    margin-top: span(1 of 10);
+    padding-bottom: gutter(1.45);
+  }
+  @include breakpoint($bp-laptop-lg) {
+    @include span(2 of 10 last);
+    margin-top: 0em;
+    padding-bottom: gutter(1.06);
+  }
+  @include breakpoint($bp-desktop-sm) {
+    @include span(2 of 10 last);
+    margin-top: 0em;
+    padding-bottom: gutter(2);
   }
 }
 
 .ag4 {
-  @include breakpoint(900px) {
+  @include breakpoint($bp-laptop-sm) {
     @include span(3 of 6);
   }
 }
 
 .ag5 {
-  @include breakpoint(900px) {
+  @include breakpoint($bp-laptop-sm) {
     @include span(3 of 6 last);
   }
 }
 
 .ag6 {
-  @include breakpoint(900px) {
+  @include breakpoint($bp-laptop-sm) {
     @include span(2 of 6);
   }
 }
 
 .ag7 {
-  @include breakpoint(900px) {
+  @include breakpoint($bp-desktop-sm) {
+    @include span(2 of 3);
+  }
+  @include breakpoint($bp-laptop-sm) {
     @include span(4 of 6 last);
     @include clearfix;
   }
 }
 
 .ag8 {
-  @include breakpoint(900px) {
+  @include breakpoint($bp-laptop-sm) {
     @include span(2 of 4);
   }
 }
 
 .ag9 {
-  @include breakpoint(900px) {
+  @include breakpoint($bp-laptop-sm) {
     @include span(2 of 4 last);
   }
 }
@@ -106,6 +142,24 @@ $susy: (
     @include span(full);
   }
 }
+
+// Typography
+
+h1 {
+  text-align: center;
+  font-family: 'Open Sans', helvetica;
+  font-weight: 300;
+  color: #222;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: normal;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
 
 // Colors
 
@@ -139,21 +193,4 @@ $susy: (
 
 .ag10 {
   background-color: #ea9fc3;
-}
-
-// Typography
-
-h1 {
-  text-align: center;
-  font-family: 'Open Sans', helvetica;
-  font-weight: 300;
-  color: #222;
-}
-
-h2 {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: normal;
-  padding-top: 1.8rem;
-  padding-bottom: 1.8rem;
 }
