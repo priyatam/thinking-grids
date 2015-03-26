@@ -2,6 +2,9 @@
 @import "bower_components/normalize.css/normalize";
 @import "bower_components/susy/sass/susy";
 @import "bower_components/breakpoint-sass/stylesheets/breakpoint";
+@import 'mixins';
+@import 'breakpoints';
+@import 'typography';
 
 // Config
 
@@ -12,44 +15,11 @@ $susy: (
   use-custom: (rem: true)
 );
 
-// Mobile-first breakpoints (min-widths)
-
-$bp-desktop-lg: 2500px;
-$bp-desktop-sm: 1920px;
-$bp-laptop-lg: 1680px;
-$bp-laptop-sm: 1280px;
-$bp-tablet-lg: 960px;
-$bp-tablet-sm: 720px;
-$bp-phone-lg: 480px;
-$bp-phone-sm: 320px;
-
 @include border-box-sizing;
-
-// Mixins
-
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
-
-@mixin clearfix() {
-  & {
-    *zoom: 1;
-  }
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
 
 // Grids
 
 .container {
-  @include container;
   @include clearfix;
   padding-left: 1em;
   padding-right: 1em;
@@ -142,24 +112,6 @@ $bp-phone-sm: 320px;
     @include span(full);
   }
 }
-
-// Typography
-
-h1 {
-  text-align: center;
-  font-family: 'Open Sans', helvetica;
-  font-weight: 300;
-  color: #222;
-}
-
-h2 {
-  text-align: center;
-  font-size: 1rem;
-  font-weight: normal;
-  padding-top: 1.8rem;
-  padding-bottom: 1.8rem;
-}
-
 
 // Colors
 
