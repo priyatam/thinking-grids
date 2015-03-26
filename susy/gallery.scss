@@ -1,0 +1,120 @@
+// Goto bower_components and rename normalize.css to normalize.scss and inline css
+@import 'bower_components/susy/sass/susy';
+@import 'bower_components/breakpoint-sass/stylesheets/breakpoint';
+@import 'mixins';
+@import 'breakpoints';
+
+// Config
+
+$susy: (
+  columns: 16,
+  gutters: (1/16),
+  global-box-sizing: border-box,
+  debug: (image:show)
+);
+
+
+// HTML Elements
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100;
+  height: auto;
+}
+
+nav {
+  float: right;
+
+  li {
+    list-style: none;
+    a {
+      color: #666;
+      padding-left: 1rem;
+      line-height: e;
+      text-decoration:none;
+    }
+  }
+}
+
+// Layout
+
+.wrap {
+  @include container(1140px);
+  @include clearfix;
+  height: 100vh;
+}
+
+.content {
+  @include span(12 of 16);
+  margin-top: 5vh;
+  padding-bottom: 1rem;
+  background: rgba(113, 218, 210, 0.8);
+}
+
+.sidebar {
+  @include span(2 of 8 last);
+  @include clearfix;
+  margin-top: 5vh;
+  padding-bottom: 1rem;
+  background: rgba(113, 218, 210, 0.8);
+
+  li {
+    list-style: none;
+  }
+  a {
+    color: #666;
+    padding-left: 1rem;
+    line-height: 2;
+    text-decoration: none;
+  }
+}
+
+.gallery {
+  @include clearfix;
+  width: span(10 of 12);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery__item {
+  @include span(2 of 10);
+  list-style: none;
+  &:nth-child(5n) {
+    @include last;
+  }
+  margin-bottom: gutter(10);
+}
+
+.site-header, .site-footer {
+  background: rgba(234, 159, 195, 0.8);
+}
+
+.site-header {
+  a {
+    color: #555;
+    text-decoration: none;
+  }
+}
+
+.logo {
+  float: left;
+  line-height: 2rem;
+  font-size: 1.5rem;
+}
+
+.widget {
+  @include span(4 of 16);
+  &:nth-child(4n) {
+    @include last;
+  }
+  margin-left: auto;
+  background: rgba(240, 150, 113, 0.8);
+}
+
+.site-footer {
+  margin-top: 5vh;
+}
