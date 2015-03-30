@@ -1,12 +1,21 @@
-@import '../bower_components/bootstrap/less/normalize';
-@import (inline) '../bower_components/flexboxgrid/css/index.css';
+@import '../bower_components/normalize.css/normalize.css';
+@import '../bower_components/flexboxgrid/css/index.css';
+
+/* Vars */
+
+:root {
+  --fontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fontSize: 1.2rem;
+  --mainColor: #12345678;
+  --highlightColor: hwb(190, 35%, 20%);
+}
 
 body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-size: 18px;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: var(--fontFamily);
   font-weight: normal;
   background: #EEE;
   line-height: 1.4rem;
@@ -185,7 +194,7 @@ a:hover {
   border-radius: 2px;
   overflow: hidden;
   text-align: center;
-  n  color: white;
+   color: white;
 }
 .box-row {
   margin-bottom: 1rem;
