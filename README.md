@@ -1,8 +1,7 @@
 Thinking Grids
 ==============
 
-A study guide for understanding Grids with working examples implemented in CSS3, Less, Sass, and CSS4 polyfills like
-[Cssnext](https://github.com/postcss/postcss) with [Postcss](https://github.com/postcss/postcss). 
+A study guide for understanding Grids with working examples implemented in CSS3, Less, Sass, Stylus, and [Postcss](https://github.com/postcss/postcss). 
 
 Libraries:
 
@@ -11,6 +10,7 @@ Libraries:
 - [Frameless](http://framelessgrid.com) (less)
 - [Gridism](http://cobyism.com/gridism/) (css3+postcss)
 - [Skel](https://github.com/n33/skel) (sass)
+- [Lost](https://github.com/corysimmons/lost) (stylus)
 - [Susy](http://susy.oddbird.net) (sass)
 
 ## Workflow
@@ -29,17 +29,29 @@ Preview the page at `http://127.0.0.1:8000` and start designing.
 
 ## Credits
 
-The initial HTML templates and styles were ported from the examples of respective libraries. Unncessary styles
-were removed to focus on grids. 
+The initial HTML templates and styles were ported from the examples of respective libraries. Redundant 
+styles were removed to focus on grids. 
+
+## Book
+
+I'm writing a brief book on Grids and will update this space soon.
 
 ## References
 
+### Articles
+
 - [Baseline Grids](http://alistapart.com/article/settingtypeontheweb)
-- [CSS Grid Module Spec](http://dev.w3.org/csswg/css-grid/)
-- [Don't overthink it grids](https://css-tricks.com/dont-overthink-it-grids/)
+- [CSS Grid Module Level 1 Spec](http://dev.w3.org/csswg/css-grid/)
+- [Don't overthink it Grids](https://css-tricks.com/dont-overthink-it-grids/)
 - [Fluid Grids](http://alistapart.com/article/fluidgrids)
-- [Golden Grid Systtem](http://goldengridsystem.com)
+- [Golden Grid System](http://goldengridsystem.com)
+- [OOCS](http://oocss.org/grids_docs.html)
+- [The magic behind Bootstrap Grids](http://www.helloerik.com/the-subtle-magic-behind-why-the-bootstrap-3-grid-works)
 - [Understanding Susy's Grids](http://www.zell-weekeat.com/susy2-tutorial)
+
+### Other Libraries
+
+- [Bobcss](http://bbo-code.com/bobscss)
 
 ## License
 

@@ -7,10 +7,11 @@
   "devDependencies": {
     "cssnext": "^1.1.0",
     "less": "^2.4.0",
+    "live-server": "0.7.0",
     "node-sass": "3.0.0-alpha.0",
+    "stylus": "^0.50.0",
     "nodemon": "^1.2.1",
     "rimraf": "^2.3.2",
-    "live-server": "0.7.0",
     "s3-cli": "^0.11.1"
   },
   "scripts": {
@@ -23,15 +24,16 @@
     "build:gridism": "node_modules/.bin/cssnext --watch gridism/index.css gridism/build/index.css && node_modules/.bin/cssnext --watch gridism/samples.css gridism/build/samples.css",
     "build:susy": "node_modules/.bin/node-sass susy/index.scss -o susy/build --source-map-embed && node-sass susy/gallery.scss -o susy/build --source-map-embed && node-sass susy/advertising.scss -o susy/build --source-map-embed",
     "build:skel": "node_modules/.bin/node-sass skel/style.scss -o skel/build --source-map-embed && node-sass skel/style-xsmall.scss -o skel/build --source-map-embed && node-sass skel/style-small.scss -o skel/build --source-map-embed && node-sass skel/style-medium.scss -o skel/build --source-map-embed && node-sass skel/style-large.scss -o skel/build --source-map-embed && node-sass skel/style-xlarge.scss -o skel/build --source-map-embed",
-    "build:stylus": "stylus brush/index.styl -m -o brush/build",
+    "build:lost": "node_modules/.bin/stylus -w lost/index.styl -m -o lost/build",
     "watch:less": "nodemon --watch bootstrap --watch frameless --ext less --exec 'npm run build:bootstrap && npm run build:frameless'",
     "watch:sass": "nodemon --watch susy/*.scss --watch skel/*.scss --ext scss --exec 'npm run build:susy'",
     "watch:susy": "nodemon --watch susy --watch skel --ext scss --exec 'npm run build:susy && npm run build:skel'",
     "live-server": "live-server --port=8000",
     "start:less": "npm run watch:less & npm run live-server",
     "start:sass": "npm run watch:susy & npm run live-server",
+    "start:stylus": "npm run build:lost & npm run live-server",
     "start:postcss": "npm run build:gridism & npm run build:flexbox & npm run live-server",
-    "start": "npm run watch:less & npm run watch:sass & npm run live-server",
+    "start": "npm run watch:less & npm run watch:sass & npm run watch:less & npm run live-server",
     "deploy": "s3-cli sync ./dist/ s3://example-com/prod-site/"
   }
 }

@@ -1,0 +1,23 @@
+@import '/bower_components/normalize.css/normalize.css'
+@import '../bower_components/lost-grid/stylus/lost.styl'
+@import '../bower_components/typographic/stylus/typographic.styl'
+@import 'reset.css'
+
+// Typographic: Config
+$max-font = 22px
+
+// Lost: Config
+$gutter = 60px
+
+typographic()
+grid-overlay(blue, 18)
+
+html
+  padding: vr-block(1.5)
+
+.row
+  div
+    column(1)
+    @media (min-width: $max-width)
+      column(1/3)
+      cycle(3)

@@ -32,6 +32,8 @@
     "susy": "~2.2.2",
     "flexboxgrid": "~6.1.1",
     "gridism": "~0.2.1",
-    "skel-layers": "~2.0.2"
+    "skel-layers": "~2.0.2",
+    "typographic": "~2.8.1",
+    "lost-grid": "~1.1.1"
   }
 }
