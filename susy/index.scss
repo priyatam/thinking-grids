@@ -5,20 +5,10 @@
 @import 'mixins';
 @import 'breakpoints';
 @import 'typography';
-
 // Config
-
-$susy: (
-  container: auto,
-  gutters: (1/4),
-  global-box-sizing: border-box,
-  use-custom: (rem: true)
-);
-
+$susy: ( container: auto, gutters: (1/4), global-box-sizing: border-box, use-custom: (rem: true));
 @include border-box-sizing;
-
 // Grids
-
 .container {
   @include clearfix;
   padding-left: 1em;
@@ -47,7 +37,7 @@ $susy: (
 .ag3 {
   @include breakpoint($bp-tablet-sm) {
     @include span(2 of 6 last);
-    margin-top:2em;
+    margin-top: 2em;
   }
   @include breakpoint($bp-laptop-sm) {
     @include span(2 of 10 last);
@@ -114,7 +104,6 @@ $susy: (
 }
 
 // Colors
-
 .container {
   background-color: #fbeecb;
 }
@@ -131,7 +120,7 @@ $susy: (
   background-color: #fae7b3;
 }
 
-.ag4,.ag5,.ag8,.ag9 {
+.ag4, .ag5, .ag8, .ag9 {
   background-color: #ee9e9c;
 }
 

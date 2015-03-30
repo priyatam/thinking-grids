@@ -1,6 +1,5 @@
 @import '../bower_components/normalize.css/normalize.css';
 @import '../bower_components/flexboxgrid/css/index.css';
-
 /* Vars */
 
 :root {
@@ -20,32 +19,33 @@ body {
   background: #EEE;
   line-height: 1.4rem;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+
+h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   color: #001A33;
 }
+
 h2 {
   font-size: 2rem;
   margin: 1rem 0;
 }
+
 :focus {
   outline-color: transparent;
   outline-style: none;
 }
+
 h2 + p {
   margin: 0 0 2rem 0;
 }
+
 a {
   text-decoration: none;
   color: #007FFF;
   padding: 0 0 0.2rem 0;
   font-weight: bold;
 }
+
 a:hover {
   color: #007FFF;
 }
@@ -55,6 +55,7 @@ a:hover {
   min-height: 100vh;
   flex-direction: column;
 }
+
 .page-nav {
   box-sizing: border-box;
   position: fixed;
@@ -62,19 +63,23 @@ a:hover {
   width: 100%;
   background: transparent;
 }
+
 .page {
   z-index: 0;
   background: #EEE;
 }
+
 .wrap {
   box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .page-section {
   padding-top: 3rem;
   margin-bottom: 3rem;
 }
+
 .page-features {
   width: 100%;
   background: hsl(209, 100%, 10%);
@@ -84,10 +89,12 @@ a:hover {
 .open {
   transform: translate3d(-15rem, 0, 0);
 }
+
 .menu-button-icon {
   width: 2rem;
   height: 2rem;
 }
+
 .hero {
   box-sizing: border-box;
   padding: 2rem;
@@ -95,17 +102,20 @@ a:hover {
   border: 1px solid #FFF;
   border-radius: 2px;
 }
+
 .hero-headline {
   font-size: 3rem;
   white-space: nowrap;
   margin-bottom: 0;
 }
+
 .hero-copy {
   font-size: 1rem;
   margin-bottom: 0;
   padding: 0 2rem;
   text-align: center;
 }
+
 .slide-menu {
   display: block;
   position: fixed;
@@ -116,21 +126,25 @@ a:hover {
   height: 100%;
   width: 250px;
 }
+
 .menu {
   box-sizing: border-box;
   padding-bottom: 5rem;
   background: hsl(209, 100%, 10%);
 }
+
 .menu-header {
   box-sizing: border-box;
   padding: 3rem 3rem 0 3rem;
   color: #eee;
 }
+
 .menu-list {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 .menu-list-item {
   height: 3rem;
   line-height: 3rem;
@@ -139,6 +153,7 @@ a:hover {
   background: transparent;
   transition: all .2s ease-in;
 }
+
 .menu-link {
   box-sizing: border-box;
   padding-left: 3rem;
@@ -146,13 +161,16 @@ a:hover {
   color: #007FFF;
   transition: color 0.2s ease-in;
 }
+
 .menu-link:hover {
   color: hsl(210, 100%, 60%);
   border-bottom: none;
 }
+
 .link-top {
   align-self: flex-end;
 }
+
 .button {
   position: relative;
   display: inline-block;
@@ -168,22 +186,21 @@ a:hover {
   font-size: 1.25rem;
   transition: background-color, 0.15s;
 }
+
 .button:hover {
   background: #3399FF;
   border-color: #3399FF;
   color: #FFF;
   text-shadow: 0 1px #007FFF;
 }
+
 .button:active {
   background: #007FFF;
   color: #FFF;
   border-top: 2px solid #0066CC;
 }
-.box-row,
-.box-first,
-.box-nested,
-.box-large,
-.box {
+
+.box-row, .box-first, .box-nested, .box-large, .box {
   box-sizing: border-box;
   position: relative;
   box-sizing: border-box;
@@ -194,45 +211,56 @@ a:hover {
   border-radius: 2px;
   overflow: hidden;
   text-align: center;
-   color: white;
+  color: white;
 }
+
 .box-row {
   margin-bottom: 1rem;
 }
+
 .box-first {
   background: #0066CC;
   border-color: #007FFF;
 }
+
 .box-nested {
   background: #003366;
   border-color: #007FFF;
 }
+
 .box-large {
   height: 8rem;
 }
+
 .box-container {
   box-sizing: border-box;
   padding: 0.5rem;
 }
+
 .page-footer {
   box-sizing: border-box;
   padding-bottom: 3rem;
 }
+
 .tag {
   color: #000;
   font-weight: normal;
 }
+
 .end {
   text-align: end;
 }
+
 .invisible-xs {
   display: none;
   visibility: hidden;
 }
+
 .visible-xs {
   display: block;
   visibility: visible;
 }
+
 @media only screen and (min-width: 48rem) {
   body {
     font-size: 16px;
@@ -251,11 +279,7 @@ a:hover {
     font-size: 1.25rem;
     margin-bottom: 2rem;
   }
-  .box-row,
-  .box-first,
-  .box-nested,
-  .box-large,
-  .box {
+  .box-row, .box-first, .box-nested, .box-large, .box {
     padding: 1rem;
   }
   .invisible-md {

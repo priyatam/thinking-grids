@@ -1,19 +1,16 @@
 @import '../bower_components/normalize.css/normalize.css';
 @import '../bower_components/gridism/gridism.css';
-
 /* General */
 
 body {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444;
   background: #FBF6F4;
-  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
 }
-
 /* I use full-width horizontal sections a lot */
-body > header,
-body > section,
-body > footer {
+
+body > header, body > section, body > footer {
   display: block;
   width: 100%;
   clear: both;
@@ -64,7 +61,7 @@ p, pre {
   line-height: 1.8em;
 }
 
-@media (min-width: 960px){
+@media (min-width: 960px) {
   h1 {
     font-size: 5em;
   }
@@ -78,7 +75,6 @@ p, pre {
     font-size: 1.8em;
   }
 }
-
 /* Styles to help demonstrate the grid */
 
 code, pre {
@@ -116,7 +112,7 @@ pre {
 
 .demo .unit .grid {
   overflow: hidden;
-  background: rgba(241,227,213,.5);
+  background: rgba(241, 227, 213, .5);
 }
 
 .demo .unit .grid:first-child {

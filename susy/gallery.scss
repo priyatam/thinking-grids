@@ -3,19 +3,9 @@
 @import 'bower_components/breakpoint-sass/stylesheets/breakpoint';
 @import 'mixins';
 @import 'breakpoints';
-
 // Config
-
-$susy: (
-  columns: 16,
-  gutters: (1/16),
-  global-box-sizing: border-box,
-  debug: (image:show)
-);
-
-
+$susy: ( columns: 16, gutters: (1/16), global-box-sizing: border-box, debug: (image:show));
 // HTML Elements
-
 ul, ol {
   margin: 0;
   padding: 0;
@@ -28,20 +18,18 @@ img {
 
 nav {
   float: right;
-
   li {
     list-style: none;
     a {
       color: #666;
       padding-left: 1rem;
       line-height: e;
-      text-decoration:none;
+      text-decoration: none;
     }
   }
 }
 
 // Layout
-
 .wrap {
   @include container(1140px);
   @include clearfix;
@@ -61,7 +49,6 @@ nav {
   margin-top: 5vh;
   padding-bottom: 1rem;
   background: rgba(113, 218, 210, 0.8);
-
   li {
     list-style: none;
   }
