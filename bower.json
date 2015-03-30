@@ -22,15 +22,16 @@
     "test",
     "*.json"
   ],
-  "devDependencies": {
+  "dependencies": {
     "normalize.css": "~3.0.2",
     "bootstrap": "~3.3.4",
     "breakpoint-sass": "~2.5.0",
-    "font-awesome":"~4.3.0",
+    "font-awesome": "~4.3.0",
     "jquery": "~1.11.1",
     "skel": "~2.2.1",
     "susy": "~2.2.2",
     "flexboxgrid": "~6.1.1",
-    "gridism": "~0.2.1"
+    "gridism": "~0.2.1",
+    "skel-layers": "~2.0.2"
   }
 }
