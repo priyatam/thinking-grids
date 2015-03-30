@@ -21,11 +21,14 @@ Templates are written in plain HTML5. Styles are written in either CSS3 with Pos
 on the libraries. Npm itself is used as a build tool (no build tools please) and Bower is used to
 manage dependencies.
 
-To start a live reloading server that compiles all preprocessors and postprocesors, run:
+To start a live reloading server that compiles all the projects with included preprocessors and postprocesors, run:
 
 	npm start
 
 Preview the page at `http://127.0.0.1:8000` and start designing.
+
+You can also start individual projects with `npm run build:susy` or projects for a particular pre/post processor
+with `npm run start:sass`.
 
 ## Credits
 
