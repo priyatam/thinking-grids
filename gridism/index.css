@@ -1,10 +1,19 @@
-@import '../bower_components/bootstrap/less/normalize';
-@import (inline) '../bower_components/gridism/gridism.css';
+@import '../bower_components/normalize.css/normalize.css';
+@import '../bower_components/gridism/gridism.css';
+
+/* Vars */
+
+:root {
+  --fontFamily: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --fontSize: 1.2rem;
+  --mainColor: #12345678;
+  --highlightColor: hwb(190, 35%, 20%);
+}
 
 /* General */
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: var(--fontFamily);
   color: #444;
   background: #FBF6F4;
   text-shadow: 0 1px 0 rgba(255,255,255,.5);
@@ -75,7 +84,7 @@ p, pre {
     font-size: 2em;
   }
   .lead {
-    font-size: 1.8em;
+    font-size: 1.9em;
   }
 }
 
@@ -83,7 +92,7 @@ p, pre {
 
 code, pre {
   font-family: "Source Code Pro", Consolas, Menlo, Monaco, monospace;
-  background: #F1E3D5;
+  background: #F1E3D3;
   color: #333;
   padding: 3px;
   border-radius: 5px;
@@ -101,8 +110,6 @@ pre {
 .demo .unit pre {
   margin: 0;
   padding: 20px 0;
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -111,8 +118,6 @@ pre {
 }
 
 .grid, .unit {
-  -webkit-transition: all .25s ease-in-out;
-  -moz-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
 }
 
