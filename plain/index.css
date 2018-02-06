@@ -1,0 +1,98 @@
+* {
+  border: 1px solid orange;
+}
+
+[class*='col-'] {
+  float: left;
+}
+
+[class*='col-'] {
+  padding-right: 20px;
+}
+
+[class*='col-']:last-of-type {
+  padding-right: 0;
+}
+
+.grid { 
+  background: white;
+  margin: 0 0 20px 0;  
+}
+
+.grid:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+.grid-pad {
+  padding: 20px 0 20px 20px;
+}
+
+.grid-pad > [class*='col-']:last-of-type {
+  padding-right: 20px;
+}
+
+.ag1 {
+  width: 20%;
+}
+
+.ag2 {
+  width: 60%;
+}
+
+.ag3 {
+  width: 20.0%;
+}
+
+.ag4 .ag5 {
+  width: 30%;
+}
+
+.ag6 {
+  width: 33.33%;
+}
+
+
+.ag7 {
+  width: 66.66%;
+}
+
+.ag6 {
+  width: 33.33%;
+}
+
+
+// Colors
+
+.grid {
+  background-color: #fbeecb;
+}
+
+.ag1, .ag3 {
+  background-color: #71dad2;
+}
+
+.ag2 {
+  background-color: #fae7b3;
+}
+
+.ag4, .ag5, .ag8, .ag9 {
+  background-color: #ee9e9c;
+}
+
+.ag6 {
+  background-color: #f09671;
+}
+
+.ag7 {
+  background-color: #f6d784;
+}
+
+.ag10 {
+  background-color: #ea9fc3;
+}
