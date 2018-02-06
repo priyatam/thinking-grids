@@ -1,18 +1,17 @@
 {
   "name": "learning-grids",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Design Grids using popular libraries in CSS3, Less, Sass, Rework and Postcss",
   "repository": "https://github.com/priyatam/learning-grids",
   "author": "Priyatam Mudivarti",
   "devDependencies": {
-    "cssnext": "^1.1.0",
-    "less": "^2.4.0",
-    "node-sass": "3.0.0-alpha.0",
-    "stylus": "^0.50.0",
-    "nodemon": "^1.2.1",
-    "rimraf": "^2.3.2",
-    "live-server": "0.7.0",
-    "s3-cli": "^0.11.1"
+    "less": "^2.7.3",
+    "live-server": "1.2.0",
+    "node-sass": "^3.13.1",
+    "nodemon": "^1.14.12",
+    "rimraf": "^2.6.2",
+    "s3-cli": "^0.13.0",
+    "stylus": "^0.54.5"
   },
   "scripts": {
     "prestart": "npm install && bower install",
@@ -34,5 +33,9 @@
     "start:postcss": "npm run build:gridism & npm run build:flexbox & npm run live-server",
     "start": "npm run watch:less & npm run watch:sass & npm run build:lost & npm run build:flexbox & npm run build:gridism & npm run live-server",
     "deploy": "s3-cli sync ./dist/ s3://example-com/prod-site/"
+  },
+  "dependencies": {
+    "postcss": "^6.0.17",
+    "postcss-cssnext": "^3.1.0"
   }
 }
