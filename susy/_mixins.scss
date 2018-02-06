@@ -1,20 +1,8 @@
-// Mixins
+/* skel-baseline v2.0.3 | (c) n33 | getskel.com | MIT licensed */
+/* Basic */
+body, input, select, textarea {
+  font-size: 11pt; }
 
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
-
-@mixin clearfix() {
-  & {
-    *zoom: 1;
-  }
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-}
+/* Banner */
+#banner {
+  padding: 7em 0; }
