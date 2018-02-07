@@ -2,17 +2,39 @@
 
 .container {
   display: grid;
-  grid-template: repeat(2, 2fr) / repeat(3, 1fr);
+  grid-template: repeat(4, 2fr) / repeat(12, 1fr);
+  grid-template-areas:
+    ". h h h h h h h h h h h"
+	"m c c c c c c c c c c c"
+	"m c c c c c c c c c c c"
+	"m c c c c c c c c c c c"
+	"m c c c c c c c c c c c"
+	"m c c c c c c c c c c c"
+	"m c c c c c c c c c c c"
+	". f f f f f f f f f f f";
   grid-gap: 5px;
 }
 
-.header {}
+.header {
+  // grid-column: 2 / -1;
+  grid-area: h;
+}
 
-.menu {}
+.menu {
+ // grid-column: 1 / 3;
+ // grid-rows: 1 / 4;
+ grid-area: m;
+}
 
-.content {}
+.content {
+  // grid-column: 1 / -1;
+  grid-area: c;
+}
 
-.footer {}
+.footer {
+  //  grid-column: 1 / -1;
+  grid-area: f;
+}
 
 /* Layout */
 
