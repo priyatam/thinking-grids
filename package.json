@@ -36,6 +36,7 @@
   },
   "dependencies": {
     "postcss": "^6.0.17",
-    "postcss-cssnext": "^3.1.0"
+    "postcss-cssnext": "^3.1.0",
+    "sassy-maps": "github:at-import/Sassy-Maps"
   }
 }

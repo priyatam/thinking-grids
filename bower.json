@@ -1,7 +1,7 @@
 {
   "name": "learning-grids",
   "version": "0.1.0",
-  "description": "Examples of Grids in CSS3, Less, Sass, Rework, and PostCSS",
+  "description": "Examples of Grids in vanilla CSS3, Less, Sass, Rework, PostCSS, and CSSGrid",
   "authors": [
     "Priyatam Mudivarti <priyatam@gmail.com>"
   ],
@@ -25,15 +25,14 @@
   "dependencies": {
     "normalize.css": "~3.0.2",
     "bootstrap": "~3.3.4",
-    "breakpoint-sass": "~2.5.0",
+    "breakpoint-sass": "~2.7.1",
     "font-awesome": "~4.3.0",
     "jquery": "~1.11.1",
-    "skel": "~2.2.1",
-    "susy": "~2.2.2",
-    "flexboxgrid": "~6.1.1",
-    "gridism": "~0.2.1",
-    "skel-layers": "~2.0.2",
-    "typographic": "~2.8.1",
-    "lost-grid": "~1.1.1"
+    "skel": "~3.0.1",
+    "susy": "~3.0.3",
+    "flexboxgrid": "~6.3.2",
+    "gridism": "~0.2.2",
+    "typographic": "~2.9.3",
+    "lost": "~8.2.0"
   }
 }
